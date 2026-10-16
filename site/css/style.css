@@ -1,0 +1,205 @@
+/* Palette sampled from assets/Qalm Learning Draft Brand.png (matches letterhead.html) */
+:root {
+  --navy:  #082642;
+  --amber: #E08D2B;
+  --amber-dark: #B86E18;
+  --cream: #FBF3E6;
+  --sky:   #C6DDEB;
+  --paper: #FFFFFF;
+  --ink:   #1F2A36;
+  --muted: #5B6B7B;
+
+  --sans:  "Jost", system-ui, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--serif);
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0 0 .6em;
+}
+h2 {
+  font-size: 1.75rem;
+  letter-spacing: .01em;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: .45em;
+  background: var(--amber);
+}
+
+a { color: var(--navy); }
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.narrow > p { max-width: 40em; }
+
+/* Header */
+.site-header {
+  border-top: 6px solid var(--navy);
+  border-bottom: 1px solid var(--sky);
+  background: var(--paper);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.brand img { width: 150px; height: auto; }
+nav { display: flex; gap: 24px; }
+nav a {
+  font: 500 .8rem/1 var(--sans);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--navy);
+}
+nav a:hover { color: var(--amber-dark); }
+
+/* Hero */
+.hero {
+  background: var(--cream);
+  padding: 72px 0 80px;
+}
+.eyebrow {
+  font: 500 .8rem/1 var(--sans);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--amber-dark);
+  margin: 0 0 18px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  max-width: 16ch;
+}
+.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 38em;
+  margin: 0 0 32px;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--navy);
+  color: #fff;
+  font: 500 .9rem/1 var(--sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  border-bottom: 3px solid var(--amber);
+}
+.btn:hover { background: #0E3A62; }
+
+/* Services */
+.services { padding: 72px 0; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.card {
+  background: var(--paper);
+  border: 1px solid var(--sky);
+  border-top: 4px solid var(--navy);
+  border-radius: 6px;
+  padding: 32px 28px;
+}
+.card-icon { height: 52px; width: auto; margin-bottom: 20px; }
+.card-icon-wide { height: 40px; margin-top: 6px; margin-bottom: 26px; }
+.card h3 { font-size: 1.4rem; }
+.card ul {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.card li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+/* About */
+.about {
+  background: linear-gradient(var(--sky), var(--sky)) top / 100% 1px no-repeat;
+  padding: 72px 0;
+}
+
+/* Contact */
+.contact {
+  background: var(--navy);
+  color: #E8EEF4;
+  padding: 72px 0;
+}
+.contact h2 { color: #fff; }
+.contact-email {
+  display: inline-block;
+  margin: 8px 0 12px;
+  font: 500 clamp(1.3rem, 4vw, 1.75rem)/1.3 var(--sans);
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid var(--amber);
+  overflow-wrap: anywhere;
+}
+.contact-email:hover { color: var(--amber); }
+.contact-place {
+  font-family: var(--sans);
+  letter-spacing: .08em;
+  color: var(--sky);
+  margin: 0;
+}
+
+/* Footer */
+.site-footer {
+  background: #061D33;
+  color: #9FB3C6;
+  font: 400 .85rem/1.5 var(--sans);
+  padding: 20px 0;
+  text-align: center;
+}
+.site-footer p { margin: 0; }
+
+@media (max-width: 560px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .brand img { width: 130px; }
+  nav { gap: 20px; }
+  .hero { padding: 48px 0 56px; }
+  .services, .about, .contact { padding: 56px 0; }
+  .card { padding: 26px 22px; }
+}
