@@ -31,14 +31,18 @@ below comes from that image and is still a draft.
   (simple secondary icon) and an open book (expanded secondary icon).
 - **Spelling:** the board uses British spelling ("Colour Palette").
 
-Company details: based in Melbourne, Australia, but works across Australia
-and internationally. The contact address is info@qalmlearning.com. Use
-Australian English.
+Company details: **Qalm Learning Pty Ltd**, ACN 702 322 950. The email is
+info@qalmlearning.com. The repo is public, so never commit the street
+address or phone number. They live only in the local, git-ignored
+`letterhead.html`. The business is based in Melbourne but
+works across Australia and internationally. Use Australian English.
 
 ## Conventions
 
 - Put brand images and other binary assets in `assets/`.
 - `letterhead.html` is an A4 letter template that you edit in the browser.
+  It is git-ignored and exists only on Ken's machine because it contains
+  private contact details.
 
 ## Website (`site/`)
 
