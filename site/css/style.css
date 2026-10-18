@@ -159,6 +159,26 @@ a { color: var(--navy); }
   background: var(--amber);
 }
 
+/* Photo band */
+.photo-band {
+  margin: 0;
+  background: var(--navy);
+}
+.photo-band img {
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.photo-band figcaption {
+  padding: 12px 16px;
+  text-align: center;
+  font: 400 .85rem/1.4 var(--sans);
+  letter-spacing: .06em;
+  color: var(--sky);
+}
+
 /* About */
 .about {
   background: linear-gradient(var(--sky), var(--sky)) top / 100% 1px no-repeat;
