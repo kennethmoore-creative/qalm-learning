@@ -113,19 +113,6 @@ a { color: var(--navy); }
 .card-icon { height: 52px; width: auto; margin-bottom: 20px; }
 .card-icon-wide { height: 40px; margin-top: 6px; margin-bottom: 26px; }
 .card h3 { font-size: 1.4rem; }
-.subjects {
-  display: flex;
-  gap: 10px;
-  margin: 0 0 16px;
-}
-.subjects span {
-  font: 500 .95rem/1 var(--sans);
-  letter-spacing: .1em;
-  color: var(--navy);
-  background: #E8F1F7;
-  padding: 9px 20px;
-  border-radius: 999px;
-}
 .card ul {
   margin: 20px 0 0;
   padding: 0;
