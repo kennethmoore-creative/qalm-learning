@@ -47,8 +47,10 @@ works across Australia and internationally. Use Australian English.
 ## Website (`site/`)
 
 - One static page (`site/index.html`, `site/css/style.css`) with no build
-  step and no JavaScript. It covers two services: K-12 Tutoring and
-  Educational Consulting.
+  step and no JavaScript. The top section shows only the large logo and three
+  link boxes (Services, About, Contact), with no other text. The services are
+  Education Services, listed first, and K-12 Tutoring (small-group maths and
+  English only).
 - `.github/workflows/deploy.yml` deploys **only `site/`** to GitHub Pages on
   every push to `main`. The custom domain is qalmlearning.com, set in the
   repo's Pages settings rather than with a CNAME file. DNS is on Namecheap.
