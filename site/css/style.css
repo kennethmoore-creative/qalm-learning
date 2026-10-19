@@ -136,29 +136,17 @@ a { color: var(--navy); }
 
 /* Photo band */
 .photo-band {
-  --fade-from: var(--paper);
-  position: relative;
   margin: 0;
   background: var(--navy);
 }
-.photo-band.fade-cream { --fade-from: var(--cream); }
-/* Soft fade from the section above into the top of the photo */
-.photo-band::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: clamp(32px, 6vw, 90px);
-  background: linear-gradient(
-    to bottom,
-    var(--fade-from) 0%,
-    color-mix(in srgb, var(--fade-from) 55%, transparent) 40%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 1;
+/* Navy band above the photo, same height as the caption band below */
+.photo-band::before,
+.photo-band figcaption {
+  display: block;
+  padding: 12px 16px;
+  font: 400 .85rem/1.4 var(--sans);
 }
+.photo-band::before { content: "\00a0"; }
 .photo-band img {
   width: 100%;
   height: auto;
@@ -167,9 +155,7 @@ a { color: var(--navy); }
   object-position: center 40%;
 }
 .photo-band figcaption {
-  padding: 12px 16px;
   text-align: center;
-  font: 400 .85rem/1.4 var(--sans);
   letter-spacing: .06em;
   color: var(--sky);
 }
