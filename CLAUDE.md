@@ -54,6 +54,16 @@ works across Australia and internationally. Use Australian English.
 - `.github/workflows/deploy.yml` deploys **only `site/`** to GitHub Pages on
   every push to `main`. The custom domain is qalmlearning.com, set in the
   repo's Pages settings rather than with a CNAME file. DNS is on Namecheap.
+- Page order: logo hero → speaking photo → Services → group photo → About →
+  Contact. Photos are full-width `.photo-band` figures cropped to exactly
+  **2.5:1 (1800×720)**, so both are always the same height. Each is framed by
+  a navy band above and a navy caption band below, the same height. Ken
+  rejected a gradient fade on the top edge, so don't reintroduce it. Crop by
+  trimming the top and bottom only, never the sides. Originals live in
+  `assets/` and are not committed.
+- **Cache-busting:** GitHub Pages caches files for 10 minutes and phones keep
+  stale copies. Whenever you change `style.css` or replace an image, bump its
+  `?v=` query string in `index.html`.
 - `site/assets/` holds copies of the logo files plus `icon-nib.png` and
   `icon-book.png`, cropped from the brand board. Keep the palette in
   `style.css` `:root` in sync with `letterhead.html`.
