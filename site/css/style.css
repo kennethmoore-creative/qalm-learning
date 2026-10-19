@@ -149,7 +149,7 @@ a { color: var(--navy); }
   top: 0;
   left: 0;
   right: 0;
-  height: clamp(48px, 11vw, 160px);
+  height: clamp(32px, 6vw, 90px);
   background: linear-gradient(
     to bottom,
     var(--fade-from) 0%,
