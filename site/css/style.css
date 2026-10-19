@@ -136,8 +136,28 @@ a { color: var(--navy); }
 
 /* Photo band */
 .photo-band {
+  --fade-from: var(--paper);
+  position: relative;
   margin: 0;
   background: var(--navy);
+}
+.photo-band.fade-cream { --fade-from: var(--cream); }
+/* Soft fade from the section above into the top of the photo */
+.photo-band::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(48px, 11vw, 160px);
+  background: linear-gradient(
+    to bottom,
+    var(--fade-from) 0%,
+    color-mix(in srgb, var(--fade-from) 55%, transparent) 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 .photo-band img {
   width: 100%;
