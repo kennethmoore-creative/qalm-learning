@@ -24,7 +24,7 @@ body {
   font: 400 1.0625rem/1.65 var(--serif);
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3 {
   font-family: var(--sans);
@@ -199,8 +199,10 @@ a { color: var(--navy); }
 .site-footer p { margin: 0; }
 
 @media (max-width: 560px) {
-  .hero { min-height: auto; padding: 56px 0; }
-  .hero-logo { margin-bottom: 40px; }
+  .hero { min-height: 82svh; padding: 48px 0; }
+  .hero-logo { margin-bottom: 48px; }
+  .hero-logo img { width: 92vw; }
+  .photo-band-tall img { height: 300px; object-position: 55% 40%; }
   .hero-nav { flex-direction: column; align-items: center; gap: 12px; }
   .hero-nav a { width: 220px; }
   .services, .about, .contact { padding: 56px 0; }
