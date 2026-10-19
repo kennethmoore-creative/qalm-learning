@@ -58,6 +58,10 @@ works across Australia and internationally. Use Australian English.
   of `assets/Qalm Learning Logo with Pen Nib.png` (a cream wordmark on navy).
   The site's `--navy` is **#0A243F**, matched exactly to that logo's
   background so it has no visible edge. Don't change one without the other.
+  A thin cream line under the hero separates it from the navy photo band.
+  The two logos are alternatives for different backgrounds: use the cream-on-
+  navy logo on navy, and `qalm-logo-primary.png` (navy on transparent) on light
+  backgrounds such as the letterhead and other documents.
   The hero buttons are cream-outlined pills that fill cream on hover.
 - Page order: logo hero → speaking photo → Services → group photo → About →
   Contact. Photos are full-width `.photo-band` figures cropped to exactly

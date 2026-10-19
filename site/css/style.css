@@ -58,6 +58,7 @@ a { color: var(--navy); }
 /* Hero: logo + three link boxes */
 .hero {
   background: var(--navy);
+  border-bottom: 2px solid var(--cream);
   min-height: 88vh;
   display: flex;
   align-items: center;
