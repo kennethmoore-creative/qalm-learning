@@ -54,6 +54,11 @@ works across Australia and internationally. Use Australian English.
 - `.github/workflows/deploy.yml` deploys **only `site/`** to GitHub Pages on
   every push to `main`. The custom domain is qalmlearning.com, set in the
   repo's Pages settings rather than with a CNAME file. DNS is on Namecheap.
+- The hero is navy and uses `site/assets/qalm-logo-navy.jpg`, a trimmed copy
+  of `assets/Qalm Learning Logo with Pen Nib.png` (a cream wordmark on navy).
+  The site's `--navy` is **#0A243F**, matched exactly to that logo's
+  background so it has no visible edge. Don't change one without the other.
+  The hero buttons are cream-outlined pills that fill cream on hover.
 - Page order: logo hero → speaking photo → Services → group photo → About →
   Contact. Photos are full-width `.photo-band` figures cropped to exactly
   **2.5:1 (1800×720)**, so both are always the same height. Each is framed by

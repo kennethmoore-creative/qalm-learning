@@ -1,6 +1,6 @@
 /* Palette sampled from assets/Qalm Learning Draft Brand.png (matches letterhead.html) */
 :root {
-  --navy:  #082642;
+  --navy:  #0A243F;  /* matches the navy background baked into qalm-logo-navy.jpg */
   --amber: #E08D2B;
   --amber-dark: #B86E18;
   --cream: #FBF3E6;
@@ -57,8 +57,7 @@ a { color: var(--navy); }
 
 /* Hero: logo + three link boxes */
 .hero {
-  background: var(--cream);
-  border-top: 6px solid var(--navy);
+  background: var(--navy);
   min-height: 88vh;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@ a { color: var(--navy); }
 .hero .wrap { width: 100%; }
 .hero-logo { margin: 0 auto 56px; }
 .hero-logo img {
-  width: min(560px, 82vw);
+  width: min(620px, 86vw);
   height: auto;
   margin: 0 auto;
 }
@@ -85,14 +84,15 @@ a { color: var(--navy); }
   letter-spacing: .22em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--navy);
-  border: 1px solid var(--navy);
+  color: var(--cream);
+  border: 1px solid rgba(251, 243, 230, .7);
   border-radius: 999px;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 .hero-nav a:hover, .hero-nav a:focus-visible {
-  background: var(--navy);
-  color: #fff;
+  background: var(--cream);
+  border-color: var(--cream);
+  color: var(--navy);
 }
 
 /* Services */
